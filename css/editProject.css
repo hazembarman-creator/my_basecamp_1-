@@ -1,0 +1,13 @@
+/* Page-specific */
+.form-row {margin-bottom:12px}
+label {display:block;margin-bottom:6px;font-weight:600}
+input[type="text"], textarea {width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb;font-size:14px}
+textarea {min-height:100px;resize:vertical}
+.actions {display:flex;gap:8px;align-items:center;margin-top:10px}
+.members-list {margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.member-row {display:flex;align-items:center;gap:8px;padding:10px;border-radius:8px;background:var(--card);box-shadow:0 3px 10px rgba(16,24,40,0.04)}
+.member-info {flex:1}
+.muted {color:var(--muted)}
+.danger {background:#fff0f0;border:1px solid #fee2e2}
+.inline-btn {padding:6px 8px;border-radius:8px;border:0;cursor:pointer}
+.small-note {font-size:13px;color:var(--muted);margin-top:6px}
