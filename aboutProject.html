@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBaseCamp — Project Overview</title>
+  <meta name="description" content="Project overview — discussions, tasks, attachments" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/aboutProject.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand-row">
+        <img src="img/logo.svg" alt="MyBaseCamp logo" class="logo" />
+        <div>
+          <div class="brand">MyBaseCamp</div>
+          <div class="small">Project overview</div>
+        </div>
+      </div>
+
+      <nav class="header-actions">
+        <a class="link" href="main.html">Projects</a>
+        <a id="btn-edit-project" class="link" href="#">Project Edit</a>
+        <a id="btn-logout" class="link" href="#">Log Out</a>
+      </nav>
+    </header>
+
+    <main class="grid" style="margin-top:12px">
+      <!-- Left column: project info + discussions -->
+      <section>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <div>
+              <h2 id="project-title" style="margin:0">Project title</h2>
+              <div id="project-creator" class="small-muted" style="margin-top:6px">Creator: —</div>
+            </div>
+            <div class="small-muted" id="project-meta">0 members · 0 discussions</div>
+          </div>
+
+          <div style="margin-top:12px" id="project-desc">Project description</div>
+        </div>
+
+        <!-- Add new discussion -->
+        <div class="panel" style="margin-top:12px">
+          <div class="section-title">
+            <div>
+              <div style="font-weight:700">Add new discussion</div>
+              <div class="small-muted">Start a new discussion thread for this project</div>
+            </div>
+          </div>
+
+          <form id="discussion-form" style="margin-top:8px">
+            <input id="discussion-title" type="text" placeholder="Discussion title" class="full-input">
+            <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+              <button class="btn btn-primary" type="submit">Create discussion</button>
+              <button class="btn btn-ghost" type="button" id="btn-clear-discussion">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Discussions list -->
+        <div class="panel" style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:700">Discussions</div>
+            <div class="small-muted" id="discussions-count">0</div>
+          </div>
+
+          <div id="discussions-list" class="discussions-list" style="margin-top:10px">
+            <!-- discussion items appended here -->
+          </div>
+          <div id="no-discussions" class="empty" style="display:none">No discussions yet — start one above.</div>
+        </div>
+
+      </section>
+
+      <!-- Right column: tasks & attachments -->
+      <aside>
+        <div class="panel">
+          <div class="section-title">
+            <div style="font-weight:700">Tasks</div>
+            <div class="small-muted" id="tasks-count">0</div>
+          </div>
+
+          <form id="task-form" style="margin-bottom:8px">
+            <input id="task-title" placeholder="Add new task" type="text" class="full-input">
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn btn-primary" type="submit">Add task</button>
+              <button class="btn btn-ghost" type="button" id="btn-clear-task">Clear</button>
+            </div>
+          </form>
+
+          <div id="tasks-list" class="tasks-list"></div>
+          <div id="no-tasks" class="empty" style="display:none">No tasks yet.</div>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <div class="section-title">
+            <div style="font-weight:700">Attachments</div>
+            <div class="small-muted" id="attachments-count">0</div>
+          </div>
+
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="file-picker" class="file-input" type="file" multiple />
+            <button id="btn-browse" class="btn btn-primary">Browse</button>
+            <div id="attach-msg" class="small-muted">Select files from your device (stored locally).</div>
+          </div>
+
+          <div id="attachments-list" style="margin-top:10px;display:flex;flex-direction:column;gap:8px"></div>
+          <div id="no-attachments" class="empty" style="display:none">No attachments yet.</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer style="margin-top:18px" class="site-footer">
+      <div>© <span id="year"></span> MyBaseCamp — frontend prototype</div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/aboutProject.js"></script>
+</body>
+</html>
