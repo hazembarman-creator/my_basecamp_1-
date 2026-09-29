@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBaseCamp — Welcome</title>
+  <meta name="description" content="Welcome to MyBaseCamp — a frontend prototype of a simple project management app." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-row">
+        <img src="img/logo.svg" alt="MyBaseCamp logo" class="logo" />
+        <div>
+          <div class="brand">MyBaseCamp</div>
+          <div class="small">A frontend prototype — projects, discussions, simple roles</div>
+        </div>
+      </div>
+
+      <nav class="header-actions">
+        <a id="hdr-continue" class="link hide" href="main.html">Continue to projects</a>
+        <a id="hdr-login" class="link" href="login.html">Log in</a>
+        <a id="hdr-signup" class="link" href="signup.html">Sign up</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="hero" role="main" aria-labelledby="welcome-title">
+      <div class="hero-left">
+        <h1 id="welcome-title" class="title">Welcome to MyBaseCamp</h1>
+        <p class="subtitle">
+          Prototype of a Basecamp-like project manager. Create an account, start projects,
+          invite members and try the interface — all data is stored locally in your browser.
+        </p>
+
+        <div class="actions" role="group" aria-label="Primary actions">
+          <a href="signup.html" class="btn btn-primary">Sign up — it's free</a>
+          <a href="login.html" class="btn btn-ghost" title="Already have an account?">Log in</a>
+          <a href="README.md" class="small help-link">How it works</a>
+        </div>
+
+        <div class="card note">
+          <strong>Demo note:</strong> the demo uses your browser storage (localStorage).
+          To reset demo data use the Reset button below or clear the app keys in your browser storage.
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card">
+          <h3 class="h3">Quick start</h3>
+          <ol class="steps">
+            <li>Create an account (Sign up)</li>
+            <li>Create your first project (Add Project)</li>
+            <li>Open a project and add a discussion or a task</li>
+          </ol>
+
+          <div class="two-buttons">
+            <a href="signup.html" class="btn btn-primary full">Create account</a>
+            <a href="login.html" class="btn btn-ghost full">I already have an account</a>
+          </div>
+        </div>
+
+        <div class="card seed" aria-hidden="false">
+          <div class="seed-row">
+            <div>
+              <div class="small strong">Seed admin</div>
+              <div class="small muted">Use <code>admin / admin</code> to test admin features</div>
+            </div>
+            <div>
+              <button id="btn-reset" class="btn reset-btn" title="Reset demo data">Reset demo</button>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> MyBaseCamp — frontend prototype</div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

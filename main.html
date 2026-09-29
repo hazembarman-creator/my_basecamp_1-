@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBaseCamp — Projects</title>
+  <meta name="description" content="List of projects — MyBaseCamp frontend prototype" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-row">
+        <img src="img/logo.svg" alt="MyBaseCamp logo" class="logo" />
+        <div>
+          <div class="brand">MyBaseCamp</div>
+          <div class="small">Projects</div>
+        </div>
+      </div>
+
+      <nav class="header-actions" id="header-actions">
+        <a id="btn-add" class="link" href="newProject.html">Add Project</a>
+        <a id="btn-edit-profile" class="link" href="editProfile.html">Edit Profile</a>
+        <a id="btn-logout" class="link" href="#">Log Out</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="top-row">
+          <div class="filters" role="tablist" aria-label="Project filters">
+            <button class="filter-btn" data-filter="all" id="filter-all">All projects</button>
+            <button class="filter-btn" data-filter="mine" id="filter-mine">Created by me</button>
+            <button class="filter-btn" data-filter="shared" id="filter-shared">Shared with me</button>
+          </div>
+
+          <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+            <div class="small-muted" id="current-user-display"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <input id="search" class="search" type="search" placeholder="Search projects by name or description" style="padding:10px;border-radius:8px;border:1px solid #e5e7eb; width:100%">
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <section id="projects-container" class="projects" aria-live="polite">
+        </section>
+
+      <div id="empty-message" class="card empty" style="display:none">
+        <div style="font-weight:700">No projects yet</div>
+        <div class="small-muted" style="margin-top:6px">Create your first project using the <strong>Add Project</strong> button.</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> MyBaseCamp — frontend prototype</div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

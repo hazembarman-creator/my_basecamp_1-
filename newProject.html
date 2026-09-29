@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBaseCamp — New Project</title>
+  <meta name="description" content="Create a new project — MyBaseCamp frontend prototype" />
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="css/newProject.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand-row">
+        <img src="img/logo.svg" alt="MyBaseCamp logo" class="logo" />
+        <div>
+          <div class="brand">MyBaseCamp</div>
+          <div class="small">Create new project</div>
+        </div>
+      </div>
+
+      <nav class="header-actions" id="header-actions">
+        <a class="link" href="main.html">Projects</a>
+        <a class="link" href="editProfile.html">Edit Profile</a>
+        <a id="btn-logout" class="link" href="#">Log Out</a>
+      </nav>
+    </header>
+
+    <main class="card page-card">
+      <h2 class="page-title">New project</h2>
+
+      <form id="project-form" novalidate>
+        <div class="form-row">
+          <label for="title">Name</label>
+          <input id="title" name="title" type="text" placeholder="Project name (required)" required />
+        </div>
+
+        <div class="form-row">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" placeholder="Short description (optional)"></textarea>
+          <div class="hint">Describe the goal of the project in 1–2 short sentences.</div>
+        </div>
+
+        <div id="error" class="small error" aria-live="polite"></div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Create Project</button>
+          <a href="main.html" class="btn btn-ghost" style="text-decoration:none">Cancel</a>
+        </div>
+      </form>
+
+      <div id="created-box" class="card created-box" style="display:none">
+        <div id="created-message" class="created-message"></div>
+        <div class="created-actions">
+          <a id="open-project" class="btn btn-primary" href="#">Open project</a>
+          <a id="go-projects" class="btn btn-ghost" href="main.html">Back to projects</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> MyBaseCamp — frontend prototype</div>
+    </footer>
+  </div>
+
+  <!-- Global app helpers (optional but recommended) -->
+  <script src="js/app.js"></script>
+  <!-- Page-specific script -->
+  <script src="js/newProject.js"></script>
+</body>
+</html>

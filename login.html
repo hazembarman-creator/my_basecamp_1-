@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBaseCamp — Log in</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-row">
+        <img src="img/logo.svg" alt="MyBaseCamp logo" class="logo" />
+        <div>
+          <div class="brand">MyBaseCamp</div>
+          <div class="small">Welcome back — sign in</div>
+        </div>
+      </div>
+
+      <nav class="header-actions">
+        <a class="link" href="welcome.html">Home</a>
+        <a class="link" href="signup.html">Sign up</a>
+      </nav>
+    </header>
+
+    <main class="card" style="max-width:480px;margin:0 auto">
+      <h2 style="margin-top:0">Log in</h2>
+
+      <form id="login-form" novalidate>
+        <div style="margin-bottom:12px">
+          <label for="who">Name or Email</label><br/>
+          <input id="who" name="who" type="text" required placeholder="Name or email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+
+        <div style="margin-bottom:12px">
+          <label for="password">Password</label><br/>
+          <input id="password" name="password" type="password" required placeholder="Password" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+
+        <div id="error" class="small" style="color:#b91c1c;margin-bottom:12px;display:none"></div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <button type="submit" class="btn btn-primary">Log in</button>
+          <a href="signup.html" class="small" style="margin-left:8px">No account? Sign up</a>
+        </div>
+
+        <div class="small muted" style="margin-top:12px">
+          Tip: use <code>admin / admin</code> to test admin features in the demo.
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> MyBaseCamp — frontend prototype</div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

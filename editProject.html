@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBaseCamp — Edit Project</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/editProject.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-row">
+        <img src="img/logo.svg" alt="MyBaseCamp logo" class="logo" />
+        <div>
+          <div class="brand">MyBaseCamp</div>
+          <div class="small">Edit project</div>
+        </div>
+      </div>
+
+      <nav class="header-actions" id="header-actions">
+        <a class="link" href="main.html">Projects</a>
+        <a class="link" href="editProfile.html">Edit Profile</a>
+        <a id="btn-logout" class="link" href="#">Log Out</a>
+      </nav>
+    </header>
+
+    <main class="card" style="max-width:900px;margin:0 auto">
+      <h2 id="page-title" style="margin-top:0">Edit project</h2>
+
+      <div id="notice" class="small muted" style="margin-bottom:12px">Loading...</div>
+
+      <section aria-labelledby="name-section" style="margin-bottom:12px">
+        <label for="project-name">Name</label>
+        <div style="display:flex;gap:8px">
+          <input id="project-name" type="text" placeholder="Project name" />
+          <button id="btn-update-name" class="btn btn-primary">Update Name</button>
+        </div>
+        <div class="small-note muted">Updating name won't change project members or discussions.</div>
+      </section>
+
+      <section aria-labelledby="desc-section" style="margin-bottom:12px">
+        <label for="project-desc">Description</label>
+        <textarea id="project-desc" placeholder="Project description"></textarea>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="btn-update-desc" class="btn btn-primary">Update Description</button>
+          <button id="btn-cancel-desc" class="btn btn-ghost">Reset</button>
+        </div>
+      </section>
+
+      <section style="margin-bottom:12px">
+        <label for="add-member-email">Add member (email)</label>
+        <div style="display:flex;gap:8px">
+          <input id="add-member-email" type="email" placeholder="member@example.com" />
+          <button id="btn-add-member" class="btn btn-primary">Add Member</button>
+        </div>
+        <div id="add-member-msg" class="small muted" style="margin-top:6px"></div>
+      </section>
+
+      <section>
+        <h3 style="margin:0 0 8px">Members</h3>
+        <div id="members-list" class="members-list"></div>
+        <div id="no-members" class="small muted" style="display:none;margin-top:8px">No members yet.</div>
+      </section>
+
+      <section style="margin-top:16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <a id="btn-overview" class="btn btn-ghost" href="#">Project Overview</a>
+        <button id="btn-delete-project" class="btn danger inline-btn">Delete Project</button>
+      </section>
+
+      <div id="error" class="small" style="color:#b91c1c;margin-top:12px;display:none"></div>
+      <div id="success" class="small" style="color:#15803d;margin-top:12px;display:none"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> MyBaseCamp — frontend prototype</div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/editProject.js"></script>
+</body>
+</html>
